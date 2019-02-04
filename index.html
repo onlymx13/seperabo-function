@@ -11,6 +11,7 @@
 <p id='output'></p>
 <script>
 function sep(a, b) {
+    if (Number.isNan(a) || Number.isNan(b)
     if (a % b === 0) {
         return sep(a/b, b);
     } else {
