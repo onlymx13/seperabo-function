@@ -19,6 +19,6 @@ function sep(a, b) {
     }
 }
 function main() {
-    document.getElementById('output').innerHTML = eval("Array(" + document.getElementById('firstNum').value + ").map( x => sep(x, " + document.getElementById('secondNum').value + "))");
+    document.getElementById('output').innerHTML = Function("Array(" + document.getElementById('firstNum').value + ").map( x => sep(x, " + document.getElementById('secondNum').value + "))").call(this);
 }
 </script></body></html>
