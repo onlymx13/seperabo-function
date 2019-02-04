@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Seperabo Function</title></head>
+<body>
+<h1>Seperabo Function</h1>
+<p>Enter the first number (the sepetend) or a list seperated by commas.</p>
+<textarea id='firstNum'></textarea>
+<p>Enter the second number (the seperator).</p>
+<textarea id='secondNum'></textarea>
+<button onclick='main()'>Calculate!</button>
+<p id='output></p>
+<script>
+function sep(a, b) {
+    if (a % b === 0) {
+        return sep(a/b, b);
+    } else {
+        return a;
+    }
+}
+function main() {
+    document.getElementById('output').innerHTML = Function("Array(" + document.getElementById('firstNum').value + ").map( x => sep(x, document.getElementById('secondNum').value))").call(this);
+}
+</script></body></html>
